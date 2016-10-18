@@ -94,10 +94,9 @@
                                             </ul> 
                                            
                                     </li>
-                                    <li role="presentation"><a href="index.php?route=common/staff">Staff</a></li>
-                                    <li role="presentation"><a href="index.php?route=common/contact">Contact Us</a></li>
+                                    <li role="presentation"><a href="index.php?route=common/staff">Staff</a></li>                                    
                                     <li role="presentation"><a href="index.php?route=common/gallery">Gallery</a></li>
-                                    
+                                    <li role="presentation"><a href="index.php?route=common/contact">Contact Us</a></li>                                    
                                 </ul>
                             </div>
                         </div>						

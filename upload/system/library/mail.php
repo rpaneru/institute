@@ -166,12 +166,9 @@ class Mail {
 
 			$handle = fsockopen($hostname, $this->smtp_port, $errno, $errstr, $this->smtp_timeout);
 
-			if (!$handle) {
-				throw new \Exception('Error: ' . $errstr . ' (' . $errno . ')');
-			} else {
-				if (substr(PHP_OS, 0, 3) != 'WIN') {
-					socket_set_timeout($handle, $this->smtp_timeout, 0);
-				}
+                        if (!$handle) {
+                            trigger_error('Error: ' . $errstr . ' (' . $errno . ')');
+                        }
 	
 		
 				while ($line = fgets($handle, 515)) {
