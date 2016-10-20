@@ -887,6 +887,11 @@ class ControllerCommonColumnLeft extends Controller {
                             $user_gid = $user_group_id['user_group_id'];
                             $data['user_gid'] = $user_gid;
                         }
+                          
+                        
+                        // these 2 lines added for dynamic left menu for custom user group
+                        $data['token'] = $this->session->data['token'];                        
+                        $data['user'] = $this->user;
                                 
 			return $this->load->view('common/column_left', $data);
 		}

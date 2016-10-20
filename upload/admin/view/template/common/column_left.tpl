@@ -57,21 +57,28 @@
     
     
     
+    
     <?php    
     if($user_gid == 11)
     {
-    ?>
-        <li id="menu-catalog" class="active">
-            <a class="parent"><i class="fa fa-cog fw"></i> <span>Settings</span></a>
-            <ul class="collapse" aria-expanded="false" style="height: 0px;">
-                <li class="active open">
-                    <a href="index.php?route=common/gallery">Gallery</a>
-                </li>		
+        if ($user->hasPermission('access', 'common/gallery')) 
+        { 
+        ?>
+        <li id="menu-system" aria-expanded="false">
+            <a class="parent"><i class="fa fa-cog fw"></i> <span>Common</span></a>
+            <ul class="collapse">
+                <li>
+                    <a href="index.php?route=common/gallery&token=<?php echo $token;?>">Gallery</a>
+                </li>
             </ul>
         </li>
-    <?php
+        <?php 
+        } 
     }
     ?>
+
+
+
   </ul>
     
     <?php    
@@ -104,3 +111,4 @@
     }
     ?>
 </nav>
+
