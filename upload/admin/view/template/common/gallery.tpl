@@ -35,26 +35,22 @@
             <table class="table table-bordered table-hover">
               <thead>
                 <tr>
-                  <td style="width: 1px;" class="text-center"><input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" /></td>
-                  <td class="text-left"><?php if ($sort == 'name') { ?>
-                    <a href="<?php echo $sort_name; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_name; ?></a>
-                    <?php } else { ?>
-                    <a href="<?php echo $sort_name; ?>"><?php echo $column_name; ?></a>
-                    <?php } ?></td>
+                  <td class="text-right"><?php echo $column_thumbnail; ?></td>
+                  <td class="text-right"><?php echo $column_heading; ?></td>
+                  <td class="text-left"><?php echo $column_caption; ?></td>                  
                   <td class="text-right"><?php echo $column_action; ?></td>
                 </tr>
               </thead>
               <tbody>
-                <?php if ($user_groups) { ?>
-                <?php foreach ($user_groups as $user_group) { ?>
+                <?php if ($gallery) {                 
+                ?>
+                <?php foreach ($gallery as $array) {
+                ?>
                 <tr>
-                  <td class="text-center"><?php if (in_array($user_group['user_group_id'], $selected)) { ?>
-                    <input type="checkbox" name="selected[]" value="<?php echo $user_group['user_group_id']; ?>" checked="checked" />
-                    <?php } else { ?>
-                    <input type="checkbox" name="selected[]" value="<?php echo $user_group['user_group_id']; ?>" />
-                    <?php } ?></td>
-                  <td class="text-left"><?php echo $user_group['name']; ?></td>
-                  <td class="text-right"><a href="<?php echo $user_group['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+                  <td class="text-left"><img src="index.php?route=common/gallery/resize&imageName=<?php echo $array['thumbnail'];?>&new_width=174&new_height=117&token=<?php echo $token;?>" ></td>
+                  <td class="text-left"><?php echo $array['heading']; ?></td>
+                  <td class="text-left"><?php echo $array['caption']; ?></td>
+                  <td class="text-right"><a href="<?php echo $array['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
                 <?php } ?>
                 <?php } else { ?>
