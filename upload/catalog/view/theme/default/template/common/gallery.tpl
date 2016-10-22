@@ -135,7 +135,7 @@ echo $header;
             <a href="#">
                 <img class="img-responsive" src="index.php?route=common/gallery/resize&imageName=<?php echo $gallery['thumbnail'];?>&new_width=348&new_height=235">
             </a>
-        </li>        
+        </li>
         <?php
         }
         ?>
