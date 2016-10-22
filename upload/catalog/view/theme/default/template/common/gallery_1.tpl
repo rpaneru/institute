@@ -124,23 +124,28 @@ echo $header;
 
 
 
-<div class="demo-gallery" styel="font-color:black;">
-    <ul id="lightgallery" class="list-unstyled row">       
-        
-        <?php        
-        foreach($gallery_data as $gallery )
-        {
-        ?>
-        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="index.php?route=common/gallery/resize&imageName=<?php echo $gallery['thumbnail'];?>&new_width=375&new_height=250 375, index.php?route=common/gallery/resize&imageName=<?php echo $gallery['thumbnail'];?>&new_width=480&new_height=320 480, index.php?route=common/gallery/resize&imageName=<?php echo $gallery['thumbnail'];?>&new_width=800&new_height=523 800" data-src="index.php?route=common/gallery/resize&imageName=<?php echo $gallery['thumbnail'];?>&new_width=1600&new_height=1066" data-sub-html="<h4><?php echo $gallery['heading'];?></h4><p><?php echo $gallery['caption'];?></p>">
-            <a href="#">
-                <img class="img-responsive" src="index.php?route=common/gallery/resize&imageName=<?php echo $gallery['thumbnail'];?>&new_width=348&new_height=235">
+<div class="demo-gallery">
+    <ul id="lightgallery" class="list-unstyled row">
+        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="extras/gallery/demo/img/1-375.jpg 375, extras/gallery/demo/img/1-480.jpg 480, extras/gallery/demo/img/1.jpg 800" data-src="extras/gallery/demo/img/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+            <a href="">
+                <img class="img-responsive" src="extras/gallery/demo/img/thumb-1.jpg">
             </a>
-        </li>        
-        <?php
-        }
-        ?>
-        
-        
+        </li>
+        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="extras/gallery/demo/img/2-375.jpg 375, extras/gallery/demo/img/2-480.jpg 480, extras/gallery/demo/img/2.jpg 800" data-src="extras/gallery/demo/img/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+            <a href="">
+                <img class="img-responsive" src="extras/gallery/demo/img/thumb-2.jpg">
+            </a>
+        </li>
+        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="extras/gallery/demo/img/13-375.jpg 375, extras/gallery/demo/img/13-480.jpg 480, extras/gallery/demo/img/13.jpg 800" data-src="extras/gallery/demo/img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+            <a href="">
+                <img class="img-responsive" src="extras/gallery/demo/img/thumb-13.jpg">
+            </a>
+        </li>
+        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="extras/gallery/demo/img/4-375.jpg 375, extras/gallery/demo/img/4-480.jpg 480, extras/gallery/demo/img/4.jpg 800" data-src="extras/gallery/demo/img/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+            <a href="">
+                <img class="img-responsive" src="extras/gallery/demo/img/thumb-4.jpg">
+            </a>
+        </li>
     </ul>
 </div>
 <script type="text/javascript">
